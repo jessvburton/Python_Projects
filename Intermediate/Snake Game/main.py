@@ -10,16 +10,6 @@ screen.bgcolor("black")
 screen.title("My Snake Game")
 screen.tracer(0)
 
-
-# # loading screen / start screen
-# loading_screen = True
-# while loading_screen:
-#     ready = input("Are you ready to start? (y/n): ").lower()
-#
-#     if ready == 'y' or ready == 'yes':
-#         loading_screen = False
-
-
 snake = Snake()
 food = Food()
 score = Scoreboard()
@@ -31,26 +21,29 @@ screen.onkey(snake.position_left, "Left")
 screen.onkey(snake.position_right, "Right")
 
 
-
-start_game = True
-while start_game:
+game_on = True
+while game_on:
     screen.update()
     time.sleep(0.1)
 
     snake.move()
 
-    if snake.snake_head.distance(food) < 15:  # Detects collision with food
+    # Detect collision with food
+    if snake.snake_head.distance(food) < 15:
         food.refresh()
-        score.update_score()
+        snake.extend()
+        score.increase_score()
 
+    # Detect collision with wall
+    if snake.snake_head.xcor() > 280 or snake.snake_head.xcor() < -280 or snake.snake_head.ycor() > 280 or snake.snake_head.ycor() < -280:
+        game_on = False
+        score.game_over()
+
+    # Detect collision with tail
+    for block in snake.blocks[1:]:
+        if snake.snake_head.distance(block) < 10:
+            game_on = False
+            score.game_over()
 
 
 screen.exitonclick()
-
-
-
-
-# TODO: Create scoreboard
-# TODO: Detect collision with wall
-# TODO: Detect collision with tail
-
