@@ -1,6 +1,6 @@
 # Python Projects
-The following projects have been created while following the *'100 Days of Code: The Complete Python Pro Bootcamp'* course on Udemy.
-I like to add to this repository as a way to practise and refresh my Python skills (which is why it spans over 100 days).
+The following projects have been created whilst following the *'100 Days of Code: The Complete Python Pro Bootcamp'* course on Udemy.
+I like to add to this repository as a way to practise and refresh my Python skills.
 This includes, but is not limited to, Python 3, object-oriented programming (OOP), automation and scripting, game development, and basic GUI applications.
 
 **Course Link:** [100 Days of Code: The Complete Python Pro Bootcamp](https://www.udemy.com/course/100-days-of-code/)
