@@ -1,4 +1,4 @@
-# 100-Days-of-Python-Projects
+# Python Projects
 
 The following projects have been created while following the *'100 Days of Code: The Complete Python Pro Bootcamp'* course on Udemy.
 I like to add to this repository as a way to practise and refresh my Python skills (which is why it spans over 100 days).
