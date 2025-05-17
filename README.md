@@ -33,6 +33,6 @@ This includes, but is not limited to, Python 3, object-oriented programming (OOP
 - Hirst Painting
 - Etch-a-Sketch App
 - Turtle Racing Game
-- Snake Game
+- Snake Game (now with highscore!)
 - Pong Game
 - Crossing Game
