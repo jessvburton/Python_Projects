@@ -7,7 +7,7 @@ race_turtles = {
     "yellow": -30,
     "green": 30,
     "blue": 90,
-    "purple": 150
+    "purple": 150,
 }
 ready_turtles = []
 
@@ -24,7 +24,8 @@ for colour, y_position in race_turtles.items():
     ready_turtles.append(turtle_name)
 
 user_bet = screen.textinput(
-    title="Make your bet", prompt="Which turtle will win the race? Enter a colour: ").lower()
+    title="Make your bet", prompt="Which turtle will win the race? Enter a colour: "
+).lower()
 
 if user_bet:
     is_race_on = True
@@ -35,11 +36,9 @@ while is_race_on:
             is_race_on = False
             winning_colour = turtle.pencolor()
             if winning_colour == user_bet:
-                print(
-                    f"You've won! The {winning_colour} turtle is the winner!")
+                print(f"You've won! The {winning_colour} turtle is the winner!")
             else:
-                print(
-                    f"You've lost! The {winning_colour} turtle is the winner!")
+                print(f"You've lost! The {winning_colour} turtle is the winner!")
         rand_distance = random.randint(0, 10)
         turtle.forward(rand_distance)
 

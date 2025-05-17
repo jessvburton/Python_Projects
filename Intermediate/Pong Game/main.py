@@ -38,7 +38,12 @@ while game_on:
         ball.bounce_y()
 
     # Detect collision with paddle
-    if ball.distance(r_paddle) < 50 and ball.xcor() > 320 or ball.distance(l_paddle) < 50 and ball.xcor() < -320:
+    if (
+        ball.distance(r_paddle) < 50
+        and ball.xcor() > 320
+        or ball.distance(l_paddle) < 50
+        and ball.xcor() < -320
+    ):
         ball.bounce_x()
 
     # Detect R paddle misses

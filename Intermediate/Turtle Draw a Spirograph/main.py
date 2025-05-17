@@ -4,9 +4,7 @@ from random import randint
 
 def change_colour():
     colormode(255)
-    pencolor(randint(0, 255),
-             randint(0, 255),
-             randint(0, 255))
+    pencolor(randint(0, 255), randint(0, 255), randint(0, 255))
 
 
 def draw_spirograph():

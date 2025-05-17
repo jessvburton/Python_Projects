@@ -8,7 +8,7 @@ def extract_colors():
     Extract x amount of colours from an image
     :return: list of colours. rgb in a tuple
     """
-    colors = colorgram.extract('image.jpeg', 25)
+    colors = colorgram.extract("image.jpeg", 25)
     all_colors = []
     for c in range(len(colors)):
         rgb = (colors[c].rgb[0], colors[c].rgb[1], colors[c].rgb[2])

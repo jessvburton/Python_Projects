@@ -2,8 +2,8 @@ from configs import *
 
 
 def check_resources(customer_order):
-    for item in MENU[customer_order]['ingredients']:
-        if resources[item] >= MENU[customer_order]['ingredients'][item]:
+    for item in MENU[customer_order]["ingredients"]:
+        if resources[item] >= MENU[customer_order]["ingredients"][item]:
             return True
         else:
             print(f"Sorry, there is not enough {item}")
@@ -11,14 +11,14 @@ def check_resources(customer_order):
 
 
 def process_money(customer_order):
-    cost = MENU[customer_order].get('cost')
+    cost = MENU[customer_order].get("cost")
     print(f"A {customer_order} costs ${cost}")
     print("Please insert coins.")
 
-    quarters = int(input("How many quarters? ")) * COIN_VALUES.get('quarter')
-    dimes = int(input("How many dimes? ")) * COIN_VALUES.get('dime')
-    nickles = int(input("How many nickles? ")) * COIN_VALUES.get('nickle')
-    pennies = int(input("How many pennies? ")) * COIN_VALUES.get('penny')
+    quarters = int(input("How many quarters? ")) * COIN_VALUES.get("quarter")
+    dimes = int(input("How many dimes? ")) * COIN_VALUES.get("dime")
+    nickles = int(input("How many nickles? ")) * COIN_VALUES.get("nickle")
+    pennies = int(input("How many pennies? ")) * COIN_VALUES.get("penny")
 
     total_coins = quarters + pennies + nickles + dimes
     change = round(total_coins - cost, 2)
@@ -32,9 +32,9 @@ def process_money(customer_order):
 
 
 def make_coffee(customer_order):
-    resources['money'] += MENU[customer_order]['cost']
-    for item in MENU[customer_order]['ingredients']:
-        resources[item] -= MENU[customer_order]['ingredients'][item]
+    resources["money"] += MENU[customer_order]["cost"]
+    for item in MENU[customer_order]["ingredients"]:
+        resources[item] -= MENU[customer_order]["ingredients"][item]
 
     print(f"Enjoy your {customer_order}")
 
@@ -52,14 +52,19 @@ def machine_working():
 
     while machine_on:
         customer_order = input(
-            "What would you like? (espresso/latte/cappuccino)\n").lower()
+            "What would you like? (espresso/latte/cappuccino)\n"
+        ).lower()
 
         if customer_order == "report":
             for keys, values in resources.items():
-                print(keys, ':', values)
+                print(keys, ":", values)
         elif customer_order == "off":
             machine_on = False
-        elif customer_order == "espresso" or customer_order == "latte" or customer_order == "cappuccino":
+        elif (
+            customer_order == "espresso"
+            or customer_order == "latte"
+            or customer_order == "cappuccino"
+        ):
             place_order(customer_order)
         else:
             print("Command not recognised. Try again.")
