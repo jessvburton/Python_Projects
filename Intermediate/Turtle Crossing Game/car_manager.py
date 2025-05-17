@@ -5,6 +5,7 @@ COLORS = ["red", "orange", "yellow", "green", "blue", "purple"]
 STARTING_MOVE_DISTANCE = 5
 MOVE_INCREMENT = 10
 
+
 class CarManager:
     def __init__(self):
         self.cars = []
@@ -16,7 +17,6 @@ class CarManager:
             self.new_car()
         else:
             pass
-
 
     def new_car(self):
         new_car = Turtle("square")
@@ -32,12 +32,9 @@ class CarManager:
 
         self.cars.append(new_car)
 
-
     def move(self):
         for car_num in range(len(self.cars)):
             self.cars[car_num].forward(self.car_speed)
 
     def incr_speed(self):
         self.car_speed += MOVE_INCREMENT
-
-

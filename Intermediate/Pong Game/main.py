@@ -15,7 +15,7 @@ l_paddle = Paddle(L_PADDLE_POSITION)
 
 
 # Screen set-up
-screen.setup(800,600)
+screen.setup(800, 600)
 screen.bgcolor("black")
 screen.title("Pong")
 screen.tracer(0)

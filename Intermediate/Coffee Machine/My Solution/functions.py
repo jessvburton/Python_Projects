@@ -51,7 +51,8 @@ def machine_working():
     machine_on = True
 
     while machine_on:
-        customer_order = input("What would you like? (espresso/latte/cappuccino)\n").lower()
+        customer_order = input(
+            "What would you like? (espresso/latte/cappuccino)\n").lower()
 
         if customer_order == "report":
             for keys, values in resources.items():

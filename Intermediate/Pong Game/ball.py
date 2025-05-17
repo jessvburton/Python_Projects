@@ -1,5 +1,6 @@
 from turtle import Turtle
 
+
 class Ball(Turtle):
     def __init__(self):
         super().__init__()
@@ -23,6 +24,6 @@ class Ball(Turtle):
         self.move_speed *= 0.9
 
     def reset(self):
-        self.teleport(0,0)
+        self.teleport(0, 0)
         self.move_speed = 0.1
         self.bounce_x()
