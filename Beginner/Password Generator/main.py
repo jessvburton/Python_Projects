@@ -23,5 +23,5 @@ for n in range(nr_numbers):
     password.append(random.choice(numbers))
 
 random.shuffle(password)
-p = ''.join(map(str, password))
+p = "".join(map(str, password))
 print(p)

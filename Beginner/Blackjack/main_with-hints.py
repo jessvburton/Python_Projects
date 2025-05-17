@@ -53,8 +53,7 @@ def blackjack():
         user_cards.append(deal_card())
 
     print(f"Computers first card: {computer_cards[0]}")
-    print(
-        f"Your cards are:{user_cards}, current score: {calculate_score(user_cards)}")
+    print(f"Your cards are:{user_cards}, current score: {calculate_score(user_cards)}")
 
     if calculate_score(computer_cards) == 0 or calculate_score(user_cards) == 0:
         print("Blackjack!")
@@ -65,27 +64,28 @@ def blackjack():
 
     while draw_again == True:
         play_on = input(
-            "Would you like to draw another card? Type 'y' or 'n'\n").lower()
+            "Would you like to draw another card? Type 'y' or 'n'\n"
+        ).lower()
 
-        if play_on == 'n':
+        if play_on == "n":
             draw_again = False
         else:
             user_cards.append(deal_card())
             print(
-                f"Your cards are:{user_cards}, current score: {calculate_score(user_cards)}")
+                f"Your cards are:{user_cards}, current score: {calculate_score(user_cards)}"
+            )
 
     if calculate_score(computer_cards) < 17:
         computer_cards.append(deal_card())
 
     compare(user_cards, computer_cards)
     play_again = input("Play again? Type 'y' or 'n'\n").lower()
-    if play_again == 'y':
+    if play_again == "y":
         user_cards.clear()
         computer_cards.clear()
         blackjack()
 
 
-play = input(
-    "Do you want to play a game of Blackjack? Type 'y' or 'n'\n").lower()
-if play == 'y':
+play = input("Do you want to play a game of Blackjack? Type 'y' or 'n'\n").lower()
+if play == "y":
     blackjack()

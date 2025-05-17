@@ -65,10 +65,14 @@ if __name__ == "__main__":
 
     if issues_found:
         while True:
-            answer = input(
-                "Would you like to attempt to automatically fix these "
-                "issues? (Y/N): "
-            ).strip().upper()
+            answer = (
+                input(
+                    "Would you like to attempt to automatically fix these "
+                    "issues? (Y/N): "
+                )
+                .strip()
+                .upper()
+            )
             if answer == "Y":
                 apply_autopep8(linting_output)
                 break

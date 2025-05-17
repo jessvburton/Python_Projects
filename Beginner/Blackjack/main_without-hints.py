@@ -28,7 +28,7 @@ def blackjack():
 
     while more == True:
         another = input("Take another card? Type 'y' or 'n'\n")
-        if another == 'y':
+        if another == "y":
             deal()
         else:
             # change 11 to 1 if total more than 21
@@ -39,10 +39,11 @@ def blackjack():
             # player1 cards and total
             print(f"Your final hand:{player1}, final score: {player1_score}")
             # computer cards and total
-            print(
-                f"Computers final hand:{computer}, final score: {computer_score}")
+            print(f"Computers final hand:{computer}, final score: {computer_score}")
 
-            if player1_score <= 21 and computer_score <= 21:  # checks both are equal to or less than 21
+            if (
+                player1_score <= 21 and computer_score <= 21
+            ):  # checks both are equal to or less than 21
                 if player1_score > computer_score:
                     print("You win.")
                 elif player1_score == computer_score:
@@ -58,8 +59,9 @@ def blackjack():
                     print("You win.")
 
             re_play = input(
-                "Do you want to play another game of Blackjack? Type 'y' or 'n'\n").lower()
-            if re_play == 'y':
+                "Do you want to play another game of Blackjack? Type 'y' or 'n'\n"
+            ).lower()
+            if re_play == "y":
                 player1.clear()
                 computer.clear()
                 more = False
@@ -68,7 +70,6 @@ def blackjack():
                 more = False
 
 
-play = input(
-    "Do you want to play a game of Blackjack? Type 'y' or 'n'\n").lower()
-if play == 'y':
+play = input("Do you want to play a game of Blackjack? Type 'y' or 'n'\n").lower()
+if play == "y":
     blackjack()
