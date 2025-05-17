@@ -8,9 +8,7 @@ directions = [0, 90, 180, 270]
 
 
 def change_colour():
-    pencolor(randint(0, 255),
-             randint(0, 255),
-             randint(0, 255))
+    pencolor(randint(0, 255), randint(0, 255), randint(0, 255))
 
 
 while True:

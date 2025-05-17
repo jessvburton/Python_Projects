@@ -5,6 +5,7 @@ R_SCOREBOARD_POSITION = (100, 215)
 ALIGNMENT = "center"
 FONT = ("Arial", 60, "normal")
 
+
 class Scoreboard(Turtle):
     def __init__(self):
         super().__init__()
@@ -14,7 +15,6 @@ class Scoreboard(Turtle):
         self.l_score = 0
         self.r_score = 0
         self.update_score()
-
 
     def update_score(self):
         self.clear()

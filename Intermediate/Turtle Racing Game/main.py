@@ -7,7 +7,7 @@ race_turtles = {
     "yellow": -30,
     "green": 30,
     "blue": 90,
-    "purple": 150
+    "purple": 150,
 }
 ready_turtles = []
 
@@ -23,7 +23,9 @@ for colour, y_position in race_turtles.items():
     turtle_name.goto(x=-230, y=y_position)
     ready_turtles.append(turtle_name)
 
-user_bet = screen.textinput(title="Make your bet", prompt="Which turtle will win the race? Enter a colour: ").lower()
+user_bet = screen.textinput(
+    title="Make your bet", prompt="Which turtle will win the race? Enter a colour: "
+).lower()
 
 if user_bet:
     is_race_on = True
